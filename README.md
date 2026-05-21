@@ -17,7 +17,9 @@ It preserves the published modern `/api/v1/...` and legacy-compatible routes, wh
 python -m venv .venv
 . .venv/bin/activate
 pip install -r requirements.txt
-uvicorn fuzz_core.main:app --reload
+export FUZZ_CORE_CONFIG=./config.yaml
+python -m fuzz_core.main
+
 ```
 
 Open:
